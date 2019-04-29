@@ -2,7 +2,7 @@ document.getElementById('get-palette').addEventListener('submit', (e) => {
   e.preventDefault();
   let username = document.getElementById('username').value
 
-  fetch('http://localhost:3000/api/v1/palettes/' + username).then(data => {
+  fetch('https://color-picker-mobile.herokuapp.com/api/v1/palettes/' + username).then(data => {
     return data.json()
   }).then((data) => updatePage(data))
   .catch(error => console.error(error));
